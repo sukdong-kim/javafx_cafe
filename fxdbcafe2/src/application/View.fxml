@@ -34,7 +34,7 @@
       <DatePicker fx:id="txtDate_end" layoutX="464.0" layoutY="707.0" />
       <Label layoutX="117.0" layoutY="711.0" text="시작날짜" />
       <Label layoutX="404.0" layoutY="711.0" text="종료날짜" />
-      <GridPane hgap="10.0" layoutX="904.0" layoutY="120.0" prefHeight="238.0" prefWidth="282.0" style="-fx-background-color: cyan;">
+      <GridPane hgap="10.0" layoutX="904.0" layoutY="176.0" prefHeight="238.0" prefWidth="282.0" style="-fx-background-color: cyan;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="77.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="185.0" />
@@ -80,6 +80,11 @@
             <Insets right="10.0" />
          </padding>
       </GridPane>
+      <Label fx:id="lbl_total" layoutX="969.0" layoutY="109.0" text="Date">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
    </children>
    <opaqueInsets>
       <Insets />

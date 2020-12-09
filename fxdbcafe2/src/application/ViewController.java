@@ -59,6 +59,8 @@ public class ViewController {
     private DatePicker txtDate;
     @FXML
     private Label lbl_date;
+    @FXML
+    private Label lbl_total;
 	@FXML
 	private BarChart<String, Integer> bar;
 	public void initialize() {	
@@ -84,6 +86,7 @@ public class ViewController {
     	int year1 = (txtDate_start.getValue().getYear());
     	int month1 = (txtDate_start.getValue().getMonthValue());
     	int day1 = (txtDate_start.getValue().getDayOfMonth());
+    
     	
     	String s_y1,s_m1,s_d1,start_date;  	
     	if(day1<10) 
@@ -191,8 +194,10 @@ public class ViewController {
 				
 			}			
 		}
-		display_barchart("Display Duration");
-		display_total();
+		String s_d = txtDate_start.getValue().toString();
+		String s_e = txtDate_end.getValue().toString();
+		display_barchart(s_d+" ~ " + s_e);
+		display_total(s_d+" ~ " + s_e);
     }
 	
     @FXML
@@ -281,18 +286,21 @@ public class ViewController {
                 );
             pie.setData(list);
 		 */
-		display_barchart("Today's Summary");
-		display_total();
+		display_barchart(txtDate.getValue().toString());
+		
+		display_total(txtDate.getValue().toString());
 		
 		
 	}
     
-    public void display_total() {
+    public void display_total(String dis) {
         NumberFormat numberFormatter = NumberFormat.getNumberInstance();
     
     	txt_coffee_total.setText(numberFormatter.format(total_coffee) +"¿ø");
     	txt_cake_total.setText(numberFormatter.format(total_cake)+"¿ø");
     	txt_all_total.setText(numberFormatter.format(total)+"¿ø");
+    	
+    	lbl_total.setText(dis);
     }
 
     public void display_barchart(String title_str) {

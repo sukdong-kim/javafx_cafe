@@ -330,7 +330,7 @@ public class MenuController {
 		txt_k6.setText(String.valueOf(l));  
 		txt_t2.setText(String.valueOf(total_cake));  
 	}
-
+	
 	@FXML
 	void onClickReceipt(ActionEvent event) {
 
