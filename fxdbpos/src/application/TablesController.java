@@ -9,6 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -17,9 +18,15 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class TablesController {
 	Connection conn = null;
 
+//	String newSelection,oldSelection,obs;
 	Tables tables;
     @FXML
     private TextField tfTableName;
+    @FXML
+    private Button btnUpdate;
+
+    @FXML
+    private Button btnDelete;
 
     @FXML
     private TableView<Tables> tableView;
@@ -33,12 +40,48 @@ public class TablesController {
 
 	@FXML
 	private void initialize() {
+		addListenerForTable();
 		showTable();
 	}
+	
+    @FXML
+    void deleteTable(ActionEvent event) {
+    	conn = mysqlconnect.ConnectDb();
+    	Tables table = tableView.getSelectionModel().getSelectedItem();
+    	String query = "DELETE FROM tblTable WHERE id = '"+table.getId()+"'";
+    	execteQuery(query);
+    	showTable();
+    }
+
+    @FXML
+    void updateTable(ActionEvent event) {
+    	conn = mysqlconnect.ConnectDb();
+    	Tables table = tableView.getSelectionModel().getSelectedItem();
+    	String query = "UPDATE tblTable SET name = '"+tfTableName.getText()+"' WHERE id = '"+table.getId()+"'";
+    	execteQuery(query);
+    	showTable();
+    }
+    
+    private void addListenerForTable() {
+    	tableView.getSelectionModel().selectedItemProperty().addListener((obs,oldSelection,newSelection) -> {
+    		if(newSelection != null) {
+    			btnUpdate.setDisable(false);
+    			btnDelete.setDisable(false);
+    			tfTableName.setText(newSelection.getName());
+    		}else {
+    			tfTableName.setText("");
+    			btnUpdate.setDisable(true);
+    			btnDelete.setDisable(true);
+    		}
+    	});
+    }
+	
     @FXML
     void saveTable(ActionEvent event) {
     	insertRecord();
     }
+    
+
     public void showTable() {
     	ObservableList<Tables> list = getTableList();
     	colId.setCellValueFactory(new PropertyValueFactory<Tables,Integer>("id"));

@@ -27,7 +27,7 @@
                <children>
                   <ImageView fitHeight="134.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Users/sdk10/Downloads/새%20폴더/bulkingbro-pasta.jpg" />
+                        <Image url="@../../images/20170306-fast-pasta-recipes-roundup-01-1500x1125.jpg" />
                      </image>
                   </ImageView>
                   <Label prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(0.0,0.0,0.0,0.7);" text="Label" textFill="#f2efef" StackPane.alignment="BOTTOM_LEFT" />
@@ -36,31 +36,26 @@
             </StackPane>
             <StackPane layoutX="247.0" layoutY="13.0" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="134.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../Users/sdk10/Downloads/새%20폴더/bulkingbro-pasta.jpg" />
-                     </image>
-                  </ImageView>
                   <Label prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(0.0,0.0,0.0,0.7);" text="Label" textFill="#f2efef" StackPane.alignment="BOTTOM_LEFT" />
                   <Label layoutX="10.0" layoutY="140.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(155.0,1300.0,0.0,0.7);" text="Spice Noodle" textFill="#f24949" StackPane.alignment="TOP_LEFT" />
+                  <ImageView fitHeight="134.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Pasta-HD.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </StackPane>
             <StackPane layoutX="498.0" layoutY="13.0" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="134.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../Users/sdk10/Downloads/새%20폴더/bulkingbro-pasta.jpg" />
-                     </image>
-                  </ImageView>
                   <Label prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(0.0,0.0,0.0,0.7);" text="Label" textFill="#f2efef" StackPane.alignment="BOTTOM_LEFT" />
                   <Label layoutX="10.0" layoutY="140.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(155.0,1300.0,0.0,0.7);" text="Spice Noodle" textFill="#f24949" StackPane.alignment="TOP_LEFT" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Pasta-Pictures-HD-8.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </StackPane>
-            <ImageView fitHeight="134.0" fitWidth="223.0" layoutX="498.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../Users/sdk10/Downloads/새%20폴더/bulkingbro-pasta.jpg" />
-               </image>
-            </ImageView>
             <Label layoutX="498.0" layoutY="13.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(0.0,0.0,0.0,0.7);" text="Label" textFill="#f2efef" />
             <Label layoutX="498.0" layoutY="13.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgbs(155.0,1300.0,0.0,0.7);" text="Spice Noodle" textFill="#f24949" />
          </children>
@@ -133,7 +128,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="189.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: cyan;" text="[F4.Manage Product]" textFill="#fcfcfc">
+            <Button layoutX="189.0" layoutY="20.0" mnemonicParsing="false" onAction="#manageProducts" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: cyan;" text="[F4.Manage Product]" textFill="#fcfcfc">
                <font>
                   <Font size="14.0" />
                </font>

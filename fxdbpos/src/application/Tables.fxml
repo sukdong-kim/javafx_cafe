@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.TablesController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TablesController">
    <children>
       <Pane prefHeight="13.0" prefWidth="607.0" style="-fx-background-color: #1b87fa;" />
       <Label layoutX="28.0" layoutY="45.0" text="Table Name" />
@@ -20,12 +19,12 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="352.0" layoutY="38.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: cyan;" text="Update" textFill="#fcfcfc">
+      <Button fx:id="btnUpdate" disable="true" layoutX="352.0" layoutY="38.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: cyan;" text="Update" textFill="#fcfcfc">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="459.0" layoutY="38.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: cyan;" text="Delete" textFill="#fcfcfc">
+      <Button fx:id="btnDelete" disable="true" layoutX="459.0" layoutY="38.0" mnemonicParsing="false" onAction="#deleteTable" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: cyan;" text="Delete" textFill="#fcfcfc">
          <font>
             <Font size="14.0" />
          </font>
