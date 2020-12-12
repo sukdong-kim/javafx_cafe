@@ -52,7 +52,7 @@
             <HBox prefHeight="33.0" prefWidth="179.0" spacing="10.0">
                <children>
                   <ComboBox fx:id="cbCategory" prefHeight="30.0" prefWidth="111.0" />
-                  <Button mnemonicParsing="false" onAction="#saveAdd" prefHeight="28.0" prefWidth="55.0" style="-fx-background-color: cyan;" text="add" textFill="#fcfcfc">
+                  <Button mnemonicParsing="false" onAction="#addCategory" prefHeight="28.0" prefWidth="55.0" style="-fx-background-color: cyan;" text="add" textFill="#fcfcfc">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -63,7 +63,7 @@
             <ComboBox fx:id="cbWeight" prefHeight="30.0" prefWidth="177.0" />
             <Label text="Status" />
             <ComboBox fx:id="cbStatus" layoutX="10.0" layoutY="179.0" prefHeight="30.0" prefWidth="177.0" />
-            <Button mnemonicParsing="false" onAction="#saveTable" prefHeight="28.0" prefWidth="198.0" style="-fx-background-color: cyan;" text="Save" textFill="#fcfcfc">
+            <Button mnemonicParsing="false" onAction="#saveProducts" prefHeight="28.0" prefWidth="198.0" style="-fx-background-color: cyan;" text="Save" textFill="#fcfcfc">
                <font>
                   <Font size="14.0" />
                </font>

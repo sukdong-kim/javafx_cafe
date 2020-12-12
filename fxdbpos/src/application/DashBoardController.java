@@ -37,7 +37,6 @@ public class DashBoardController {
 
 	@FXML
 	void manageTable(ActionEvent event) {
-
 		try {
 			openModalWindow("Tables.fxml","Manage Table");
 		} catch (IOException e) {
@@ -45,11 +44,7 @@ public class DashBoardController {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
-
-
 	}
-
-
 
 	private void openModalWindow(String resource, String title) throws IOException {
 		root = FXMLLoader.load(getClass().getResource(resource));
